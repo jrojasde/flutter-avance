@@ -2,11 +2,14 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomePage extends StatelessWidget {
 
+  final estiloTexto = new TextStyle( fontSize: 25 );
 
-@override
+
+  @override
 Widget build(BuildContext context) {
   return Scaffold(
 
@@ -19,11 +22,19 @@ Widget build(BuildContext context) {
 
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget> [
-          Text('Numero de clicks:'),
-          Text('0'),
+          Text('Numero de clicks:', style: estiloTexto ),
+          Text('0', style: estiloTexto ),
         ],
 
       ),
+    ),
+    floatingActionButton: FloatingActionButton(
+      child: Icon(Icons.add),
+      onPressed: () {
+
+        print('Hello word');
+
+      },
     ),
   );
  
